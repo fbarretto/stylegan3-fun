@@ -104,7 +104,7 @@ def get_video_frames(mp4_filename: Union[str, os.PathLike],
 @click.option('--vgg16-layer', type=click.Choice(['conv4_1', 'conv4_2', 'conv4_3', 'conv5_1', 'conv5_2', 'conv5_3', 'adavgpool', 'fc1', 'fc2']), help='Choose the layer to use from VGG16 (if used as encoder)', default='adavgpool', show_default=True)
 # Source video options
 @click.option('--source-video', '-video', 'video_file', type=click.Path(exists=True, dir_okay=False), help='Path to video file', required=True)
-@click.option('--max-video-length', type=click.FloatRange(min=0.0, min_open=True), help='How many seconds of the video to take (from the starting second)', default=None, show_default=True)
+@click.option('--max-video-length', type=click.FloatRange(min=0.0), help='How many seconds of the video to take (from the starting second)', default=None, show_default=True)
 @click.option('--starting-second', type=click.FloatRange(min=0.0), help='Second to start the video from', default=0.0, show_default=True)
 @click.option('--frame-transform', type=click.Choice(['none', 'center-crop', 'resize']), help='TODO: Transform to apply to the individual frame.')
 @click.option('--center-crop', is_flag=True, help='Center-crop each frame of the video')
