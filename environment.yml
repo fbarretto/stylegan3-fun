@@ -1,0 +1,31 @@
+name: stylegan3
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge  # PR #80 by @SetZero / #143 by @coldwaterq
+dependencies:
+  - python >= 3.8
+  - pip
+  - numpy>=1.20
+  - click>=8.0
+  - pillow=8.3.1
+  - scipy=1.7.1
+  - pytorch>=1.9.1  # We can now use Pytorch 1.11!
+  - cudatoolkit=11.1  # Necessary to remove previous PR by @edstoica
+  - requests=2.26.0
+  - tqdm=4.62.2
+  - ninja=1.10.2
+  - matplotlib=3.4.2
+  - imageio=2.9.0
+  - pip:
+    - imgui==1.3.0
+    - glfw==2.2.0
+    - pyopengl==3.1.5
+    - imageio-ffmpeg==0.4.3
+    - pyspng
+    - psutil  # PR #125 by @fastflair / #111 by @siddharthksah
+    - tensorboard  # PR #125 by @fastflair
+    - moviepy==1.0.3
+    - ffmpeg-python==0.2.0
+    - scikit-video==1.1.11
+    - setuptools==59.5.0   # PR #8 by @ZibbeZabbe
